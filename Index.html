@@ -1,1 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Infográfico Futebol: Palmeiras x Santos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos Globais com Tema de Futebol (Verde/Neutro) */
+        :root {
+            --palmeiras-green: #006437;
+            --santos-black: #000000;
+            --santos-white: #FFFFFF;
+            
+            --bg-dark: #1a1a1a;
+            --text-light: #f0f0f0;
+            --card-bg: #2b2b2b;
+            --risk-low: #4CAF50; /* Verde (Seguro) */
+            --risk-medium: #FFC107; /* Amarelo (Atenção) */
+            --risk-high: #F44336; /* Vermelho (Risco) */
+            --pitch-green: #008000;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            margin: 0;
+            padding: 20px;
+            overscroll-behavior: none;
+        }
+
+        /* Tipografia de Destaque (Estilo Esportivo) */
+        h1, h2, h3, .card-header, .card-title {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1.1px;
+        }
+
+        /* Container Principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        /* Cabeçalho do Infográfico */
+        .header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://placehold.co/1200x300/006437/f0f0f0?text=Allianz+Parque');
+            background-size: cover;
+            background-position: center;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--palmeiras-green);
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            color: #fff;
+            margin: 0;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+        }
+
+        .header h2 {
+            font-size: 2rem;
+            margin: 10px 0;
+            color: #fff;
+        }
+
+        .header h3 {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+        }
+
+        /* Grid de Análise */
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 30px 0;
+        }
+
+        /* Card de Análise Individual */
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: 1px solid #444;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            border-color: var(--text-light);
+        }
+
+        /* Banner de Risco (Colorido) */
+        .card-header {
+            padding: 12px 20px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #000;
+            text-align: center;
+        }
+        .risk-low { background-color: var(--risk-low); }
+        .risk-medium { background-color: var(--risk-medium); }
+        .risk-high { background-color: var(--risk-high); }
+
+        /* Conteúdo do Card */
+        .card-content {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            margin: 0 0 15px 0;
+            color: var(--text-light);
+        }
+        
+        /* Destaque no título do card */
+        .card:nth-child(1) .card-title { color: var(--risk-low); }
+        .card:nth-child(2) .card-title { color: var(--risk-medium); }
+        .card:nth-child(3) .card-title { color: var(--risk-medium); }
+        .card:nth-child(4) .card-title { color: var(--risk-high); }
+
+
+        .card-justification {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #ccc;
+        }
+        
+        .card-justification strong {
+            color: #fff;
+        }
+
+        /* Rodapé */
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- CABEÇALHO -->
+        <header class="header">
+            <h1>⚽ Análise de Apostas: Clássico</h1>
+            <h2>
+                <span>PALMEIRAS</span> vs 
+                <span>SANTOS</span>
+            </h2>
+            <h3>Brasileirão | Jogo de Título vs. Z4 | 06/11/2025</h3>
+        </header>
+
+        <!-- GRID DE ANÁLISE -->
+        <main class="analysis-grid">
+
+            <!-- Card 1: Risco Baixo -->
+            <article class="card">
+                <div class="card-header risk-low">Risco Baixo</div>
+                <div class="card-content">
+                    <h4 class="card-title">Palmeiras (Vitória Simples)</h4>
+                    <p class="card-justification">
+                        A entrada base. O Palmeiras é <strong>líder</strong>, tem a <strong>melhor campanha em casa</strong> da liga e enfrenta o Santos, <strong>um dos piores visitantes</strong>. O abismo técnico e de confiança é gigantesco. A obrigação de vencer pelo título em casa sela o favoritismo.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Card 2: Risco Médio -->
+            <article class="card">
+                <div class="card-header risk-medium">Risco Médio</div>
+                <div class="card-content">
+                    <h4 class="card-title">Ambas Marcam: NÃO</h4>
+                    <p class="card-justification">
+                        Análise de contexto. O Santos (desesperado no Z4) jogará <strong>completamente fechado ("retranca")</strong>, buscando um 0-0. O Palmeiras tem a <strong>melhor defesa em casa</strong> (média de 0.5 gols sofridos). O Santos tem o <strong>pior ataque visitante</strong>. A chance do Santos marcar no Allianz é mínima.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Card 3: Risco Médio -->
+            <article class="card">
+                <div class="card-header risk-medium">Risco Médio</div>
+                <div class="card-content">
+                    <h4 class="card-title">Mais de 5.5 Cartões</h4>
+                    <p class="card-justification">
+                        Isto é uma final para os dois lados. <strong>Clássico + Luta por Título + Desespero contra Rebaixamento</strong> = Jogo físico e tenso. O Santos fará muitas faltas táticas para parar o Palmeiras. A pressão no árbitro será máxima. É a "narrativa" clássica de cartões.
+                    </p>
+                </div>
+            </article>
+            
+            <!-- Card 4: Risco Alto -->
+            <article class="card">
+                <div class="card-header risk-high">Risco Alto</div>
+                <div class="card-content">
+                    <h4 class="card-title">Palmeiras Vence & Menos de 2.5 Gols</h4>
+                    <p class="card-justification">
+                        Uma aposta de valor para quem espera um jogo "amarrado". Combina a vitória do Palmeiras (Risco Baixo) com a tática de "retranca" do Santos. O Palmeiras pode ter dificuldade para furar o bloqueio, resultando em um <strong>placar magro de 1-0 ou 2-0</strong>.
+                    </p>
+                </div>
+            </article>
+
+        </main>
+
+        <footer class="footer">
+            Análise baseada em estatísticas e contexto (Título vs. Z4) de 06/11/2025. Aposte com responsabilidade.
+        </footer>
+
+    </div>
+
+</body>
+</html>
+
+
 
